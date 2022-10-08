@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>글작성</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+        <title>게시판</title>
+    </head>
+        <section>
+            <h3>ARTASY 게시판 입니다</h3>
+            <form method="post" action="#">
+                <div class="row gtr-uniform gtr-50">
+                    <div class="col-12">
+                        <input type="text" name="제목" id="제목" value="" placeholder="제목" />
+                    </div>
+                    <div class="col-12">
+                        <select name="category" id="category">
+                            <option value="">- Category -</option>
+                            <option value="1">졸프</option>
+                            <option value="1">언제</option>
+                            <option value="1">끝나</option>
+                            <option value="1">?</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+                    </div>
+                    <div>
+                        <input type="file" name="SelectFile" />
+                    </div>
+                    <div class="col-12">
+                        <ul class="actions">
+                            <li><input type="reset" value="Reset" /></li>
+                            <li><input type="submit" value="Send Message" class="primary" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+</html>
