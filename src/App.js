@@ -4,21 +4,31 @@
 
 import logo from './logo.svg';
 import { useState} from 'react';
-import Home from "./Components/Main"
-import Footer from "./Components/Footer"
-import Header from "./Components/Header"
+import Home from "./Components/Main";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
 import Gallery from './Components/Gallary';
 import Login from './Components/login';
-import Art from "./Components/Art"
-import About from "./Components/About"
+import Art from "./Components/Art";
+import About from "./Components/About";
 import Rating from './Components/rating';
-import "./assets/css/noscript.css"
-import "./assets/css/main.css"
+import "./assets/css/noscript.css";
+import "./assets/css/main.css";
 import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+
+import {userState, useEffect} from 'react';
+import axios from 'axios';
 
 // import img_logo from "./images/logo.png"
 
 function App() {
+
+  useEffect(() => {
+    axios.get('/api/test')
+      .then(res => console.log(res))
+      .catch()
+  })
+
   return(
     <div>
       <BrowserRouter>
