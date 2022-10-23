@@ -4,7 +4,11 @@ import React from 'react';
 import Rating from "./rating";
 import art1 from "./img/art1.png"
 
-function Art() {
+import { useParams } from "react-router-dom";
+import artpiece from "./artpiece";
+
+
+function Detail(props) {
 
     const sizeText = {
         display: "flex",
@@ -22,21 +26,37 @@ function Art() {
         alignItems: "center"
     }
 
+    const { id } = useParams();
+    const artpiece = props.artpiece.filter((artpiece) => artpiece.id === Number(id));
+
+    if (artpiece.lenth === 0) {
+        return(
+            <div>
+                <h3>존재하지 않는 작품입니다.</h3>
+            </div>
+        )
+    }
+
     return(
-        <div id="main" class="wrapper style1">
-            <div class="row gtr-150">
-                <div class="col-8 col-12-medium"></div>
+        <div id="main" className="wrapper style1">
+            <div className="row gtr-150">
+                <div className="col-8 col-12-medium"></div>
                     <div>
                             <section id="content" style={imgsize}>
-                                <a className="image fit"><img src={art1}/></a>
+                                <a className="image fit"><img src={props.artpiece[id].src}/></a>
                             </section>
                     </div>
                     <div>
                             <section id="sidebar">
                                 <section>
-                                    <h3 className="align-center">7-VII-74</h3>
+                                    <h3 className="align-center">{props.artpiece[id].title}</h3>
+                                    {/* <h3>현재 페이지의 id는 {id}입니다.</h3> */}
                                     <h3 className="align-center">코튼에 유채, 235 x 183cm</h3>
+                                    <h3 className="align-center">{props.artpiece[id].style}, {props.artpiece[id].size}</h3>
                                     <h3 className="align-center">김환기</h3>
+                                    <h3 className="align-center">{props.artpiece[id].name}</h3>
+                                    <h3 className="align-center">1978</h3>
+                                    <h3 className="align-center">{props.artpiece[id].est}</h3>
                                     <div style={sizeText}><Rating></Rating></div>
                                     &nbsp;
                                     <div className="row.gtr-150">
@@ -53,4 +73,4 @@ function Art() {
     )
 }
 
-export default Art;
+export default Detail;

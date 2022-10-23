@@ -9,25 +9,17 @@ import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Gallery from './Components/Gallary';
 import Login from './Components/login';
-import Art from "./Components/Art";
+import Detail from "./Components/Detail";
 import About from "./Components/About";
 import Rating from './Components/rating';
 import "./assets/css/noscript.css";
 import "./assets/css/main.css";
 import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
 
-import {userState, useEffect} from 'react';
-import axios from 'axios';
-
-// import img_logo from "./images/logo.png"
+import img_logo from "./images/logo.png"
+import artpiece from './Components/artpiece';
 
 function App() {
-
-  useEffect(() => {
-    axios.get('/api/test')
-      .then(res => console.log(res))
-      .catch()
-  })
 
   return(
     <div>
@@ -35,11 +27,12 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" exact={true} element={<Home />}/>
-          <Route path="gallery/*" exact={true} element={<Gallery />} />
+          <Route path="gallery" exact={true} element={<Gallery artpiece={artpiece} />} />
           <Route path="gallery" exact={true} element={<Gallery />} />
           <Route path="about" exact={true} element={<About />} />
           <Route path="login" exact={true} element={<Login />} /> 
-          <Route path="/artinfo" exact={true} element={<Art />}/>
+          <Route path="/detail/:id" element={<Detail artpiece={artpiece}/>}/>
+          <Route path="*" element={<div>없는 페이지입니다.</div>} />
         </Routes>
         <Footer />
       </BrowserRouter>
