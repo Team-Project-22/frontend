@@ -3,6 +3,12 @@ import { Button, Navbar, Container, Nav } from "react-bootstrap";
 import db from "../db/sample_data.json"
 
 function ArtList(props) {
+    const ComponentBox = {
+        display: "flex",
+        justifyContent: "center",
+        aligndbs: "center",
+    }
+
     return(
         <div class="container">
 					<header className="major">
@@ -15,7 +21,7 @@ function ArtList(props) {
                                 {props.db.map((item, index) => {
                                     return(
                                             <div className="col-4 col-6-xsmall" key={item.Obj_ID}>
-                                                <Nav.Link href={'detail/'+item.Obj_ID}>
+                                                <Nav.Link href={'detail/'+item.Obj_ID} style={ComponentBox}>
                                                     <img src={item.Img_file} width="90%" />
                                                 </Nav.Link>
                                                 <h4>key: {item.Obj_ID}</h4>
