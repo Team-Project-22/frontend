@@ -16,8 +16,8 @@ import "./assets/css/noscript.css";
 import "./assets/css/main.css";
 import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
 
-import img_logo from "./images/logo.png"
-import artpiece from './Components/artpiece';
+import img_logo from "./images/logo.png";
+import db from "./db/sample_data.json";
 
 function App() {
 
@@ -27,11 +27,11 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" exact={true} element={<Home />}/>
-          <Route path="gallery" exact={true} element={<Gallery artpiece={artpiece} />} />
+          <Route path="gallery" exact={true} element={<Gallery db={db} />} />
           <Route path="gallery" exact={true} element={<Gallery />} />
           <Route path="about" exact={true} element={<About />} />
           <Route path="login" exact={true} element={<Login />} /> 
-          <Route path="/detail/:id" element={<Detail artpiece={artpiece}/>}/>
+          <Route path="/detail/:Obj_ID" element={<Detail db={db}/>}/>
           <Route path="*" element={<div>없는 페이지입니다.</div>} />
         </Routes>
         <Footer />

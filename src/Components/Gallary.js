@@ -10,16 +10,15 @@ import ArtList from "./ArtList"
 import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import { Button, Navbar, Container, Nav } from "react-bootstrap";
 import { useState } from "react"
-import data from "./artpiece"  
-import artpiece from "./artpiece"
+import data from "../db/sample_data.json"
 
 function Gallery () {
-    const [artpiece, setArt] = useState(data);
+    const [db, setArt] = useState(data);
 
     return(
         <div>
             <div id="main" className="wrapper style1">
-                <ArtList artpiece={artpiece}></ArtList>
+                <ArtList db={db}></ArtList>
             </div>
         </div>
     );
