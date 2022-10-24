@@ -5,7 +5,7 @@ import Rating from "./rating";
 import art1 from "./img/art1.png"
 
 import { useParams } from "react-router-dom";
-import db from "../sample_data.json"
+import dbs from "../sample_data.json"
 
 function Detail() {
 
@@ -25,8 +25,8 @@ function Detail() {
         aligndbs: "center"
     }
 
-    const { id } = useParams();
-    // const db = props.db.filter((db) => db.id === Number(id));
+    const { Obj_ID } = useParams();
+    const db = dbs.filter((db) => db.Obj_ID === Number(Obj_ID));
     
 
     if (db.lenth === 0) {
@@ -45,19 +45,17 @@ function Detail() {
                                 <div className="col-8 col-12-medium" key={index}>
                                     <div>
                                         <section id="content" style={imgsize}>
-                                            <a className="image fit"><img src={item.Img_file}/></a>
+                                            <a className="image fit"><img src={db[index].Img_file}/></a>
                                         </section>
                                     </div>
                                     <div>
                                         <section id="sidebar" key={index}>
                                             <section>
-                                                <h3 className="align-center">{item.Title}</h3>
-                                                <h3 className="align-center">코튼에 유채, 235 x 183cm</h3>
-                                                <h3 className="align-center">{item.Mediums}, {item.Dimensions}</h3>
-                                                <h3 className="align-center">김환기</h3>
-                                                <h3 className="align-center">1978</h3>
-                                                <h3 className="align-center">{item.Obj_dates}</h3>
-                                                <h3>{item.index}</h3>
+                                                <h3>key : {index}</h3>
+                                                <h3>key : {db[0].Obj_ID}</h3>
+                                                <h3 className="align-center">{db[index].Title}</h3>
+                                                <h3 className="align-center">{db[index].Mediums}, {db[index].Dimensions}</h3>
+                                                <h3 className="align-center">{db[index].Obj_dates}</h3>
                                                 <div style={sizeText}><Rating></Rating></div> 
                                                 &nbsp;
                                                 <div className="row.gtr-150">

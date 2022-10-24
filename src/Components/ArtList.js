@@ -2,7 +2,7 @@ import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
 import { Button, Navbar, Container, Nav } from "react-bootstrap";
 import db from "../sample_data.json"
 
-function ArtList(props) {
+function ArtList() {
     return(
         <div class="container">
 					<header className="major">
