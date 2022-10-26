@@ -12,15 +12,22 @@ import Login from './Components/login';
 import Detail from "./Components/Detail";
 import About from "./Components/About";
 import Rating from './Components/rating';
+import Profile from './Components/Profile';
+
+import LoginPage from './pages/LoginPage';
+
+import React, {useEffect} from 'react'
+import axios from 'axios';
+
 import "./assets/css/noscript.css";
 import "./assets/css/main.css";
 import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
 
 import img_logo from "./images/logo.png";
 import db from "./db/sample_data.json";
+import RegisterPage from './pages/RegisterPage';
 
 function App() {
-
   return(
     <div>
       <BrowserRouter>
@@ -30,8 +37,10 @@ function App() {
           <Route path="gallery" exact={true} element={<Gallery db={db} />} />
           <Route path="gallery" exact={true} element={<Gallery />} />
           <Route path="about" exact={true} element={<About />} />
-          <Route path="login" exact={true} element={<Login />} /> 
+          <Route path="login" exact={true} element={<LoginPage />} />
+          <Route path="register" exact={true} element={<RegisterPage />} /> 
           <Route path="/detail/:Obj_ID" element={<Detail db={db}/>}/>
+          <Route path="profile" exact={true} element={<Profile />} /> 
           <Route path="*" element={<div>없는 페이지입니다.</div>} />
         </Routes>
         <Footer />
