@@ -1,7 +1,12 @@
 import { createAction, handleActions } from 'redux-actions';
 // produce import
 import produce from 'immer';
-
+// takeLatest import
+import { takeLatest } from 'redux-saga/effects';
+// saga import
+import createRequestSaga, { createRequestActionType } from '../lib/createRequestSaga';
+// api import
+import * as authAPI from '../lib/api/auth';
 
 // // sample 액션 타입 정의
 // // module/ACTION_TYPE. 액션 타입은 대문자로, 앞에 모듈을 붙여주어야 액션 이름 중첩을 방지할 수 있음.
@@ -10,6 +15,24 @@ import produce from 'immer';
 const CHANGE_FIELD = 'auth/CHANGE_FIELD';
 const INITIALIZE_FORM = 'auth/INITIALIZE_FORM';
 
+// react-saga api 요청 action
+// 회원가입
+// const REGISTER = 'auth/REGISTER';
+// const REGISTER_SUCCESS = 'auth/REGISTER_SUCCESS';
+// const REGISTER_FAILURE = 'auth/REGISTER_FAILURE';
+
+// 로그인
+// const LOGIN = 'auth/LOGIN';
+// const LOGIN_SUCCESS = 'auth/LOGIN_SUCCESS';
+// const LOGIN_FAILURE = 'auth/LOGIN_FAILURE'
+
+const [ REGISTER, REGISTER_SUCCESS, REGISTER_FAILURE ] = createRequestActionType(
+  'auth/REGISTER',
+);
+
+const [ LOGIN, LOGIN_SUCCESS, LOGIN_FAILURE ] = createRequestActionType(
+  'auth/LOGIN',
+);
 
 // // 액션 생성자. createAction 함수는 매번 객체를 직접 만들어 줄 필요 없이 더욱 간단하게 액션 생성 함수를 선언할 수 있음. 사용으로 액션 추가 데이터는 payload 사용. 
 // // 액션 생성자는 export
@@ -26,18 +49,43 @@ export const changeField = createAction(
 );
 
 export const initializeForm = createAction(INITIALIZE_FORM, form => form); //register , login
+
+// register/login
+export const register = createAction(REGISTER, ( {username, passoword })=> ({
+  username,
+  passoword,
+}));
+
+export const login = createAction(LOGIN, ( { username,password}) => ({
+  username,
+  password,
+}));
+
+// 사가 생성 
+
+const registerSaga = createRequestSaga(REGISTER, authAPI.register);
+const loginSaga = createRequestSaga(LOGIN,authAPI.login);
+
+export function* authSaga(){
+  // takeLatest는 기존에 진행 중이던 작업이 있다면 취소 처리 하고 가장 마지막으로 실행된 작업만 수행.
+  yield takeLatest(REGISTER, registerSaga);
+  yield takeLatest(LOGIN,loginSaga);
+}
+
 // 초기 상태 정의
 const initialState = {
-    register: {
-      username: '',
-      password: '',
-      passwordConfirm: ''
-    },
-    login: {
-      username: '',
-      password: ''
-    },
+  register: {
+    username: '',
+    password: '',
+    passwordConfirm: ''
+  },
+  login: {
+    username: '',
+    password: ''
+  },
 }
+
+
 // 리듀서 함수
 // 리듀서 함수도 더 간단하고 가독성 높게 사용하기 위해 handleActions 함수 사용
 // 리듀서 함수는 export default 로 
@@ -56,6 +104,25 @@ const auth = handleActions(
       [form]: initialState[form],
       
     }),
+    [REGISTER_SUCCESS] : ( state, { payload : auth }) => ({
+      ...state,
+      authError:null,
+      auth,
+    }),
+    [REGISTER_FAILURE] : ( state, { payload : error }) => ({
+      ...state,
+      authError:error,
+      }),
+
+    [LOGIN_SUCCESS] : ( state, { payload : auth }) => ({
+      ...state,
+      authError:null,
+      auth,
+    }),
+    [LOGIN_FAILURE] : ( state, { payload : error }) => ({
+      ...state,
+      authError:error,
+      }),
   },
   initialState,
 );
