@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 // import ScrollToTop from './Components/ScrollToTop';
 import rootReducer from './modules';
 import {createStore} from "redux"
+import { Provider } from "react-redux"; // 추가
 import { composeWithDevTools } from "redux-devtools-extension";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,10 +14,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const store = createStore(rootReducer, composeWithDevTools());
 
 root.render(
-  <React.StrictMode>
+  <Provider store={store}>
+    <React.StrictMode>
     {/* <ScrollToTop /> */}
     <App />
   </React.StrictMode>
+  </Provider>
 );
 
 

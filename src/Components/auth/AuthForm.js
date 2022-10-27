@@ -61,9 +61,9 @@ const AuthForm = ({type , form , onChange, onSubmit }) => {
                 autoComplete="username" 
                 name="username" 
                 placeholder="아이디"
-                // type="email"
+                type="email"
                 onChange={onChange}
-                // value = {form.username}
+                value = {form.username}
                  />
                  {/* // input onChange,value */}
                 <StyledInput 
@@ -72,7 +72,7 @@ const AuthForm = ({type , form , onChange, onSubmit }) => {
                 placeholder="비밀번호" 
                 type="password"
                 onChange={onChange} 
-                // value ={form.password}
+                value ={form.password}
                 
                 />
                 {/* type 이 회원가입이면, 비밀번호 확인 인풋 추가 */}
@@ -84,7 +84,7 @@ const AuthForm = ({type , form , onChange, onSubmit }) => {
                          placeholder="비밀번호 확인" 
                          type="password" 
                          onChange={onChange}
-                        //  value={form.passwordConfirm}
+                         value={form.passwordConfirm}
                         />
                     )
                 }

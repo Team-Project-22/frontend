@@ -11,7 +11,7 @@ const LoginPage = () => {
             <h2>Login</h2>
         </header>
         <AuthTemplate>
-            <AuthForm type='login' />
+            <LoginForm type='login' />
         </AuthTemplate>
     </div>
   );
