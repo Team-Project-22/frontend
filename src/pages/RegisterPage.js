@@ -11,7 +11,7 @@ const RegisterPage = () => {
             <h2>Login</h2>
         </header>
         <AuthTemplate>
-            <AuthForm type='register'/>
+            <RegisterForm type='register'/>
         </AuthTemplate>
         </div>
   );
