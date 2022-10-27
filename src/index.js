@@ -4,8 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import ScrollToTop from './Components/ScrollToTop';
+import rootReducer from './modules';
+import {createStore} from "redux"
+import { composeWithDevTools } from "redux-devtools-extension";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const store = createStore(rootReducer, composeWithDevTools());
+
 root.render(
   <React.StrictMode>
     {/* <ScrollToTop /> */}

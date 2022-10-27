@@ -2,6 +2,7 @@
 import React from 'react';
 import AuthTemplate from '../Components/auth/AuthTemplate';
 import AuthForm from '../Components/auth/AuthForm';
+import RegisterForm from '../containers/auth/RegisterForm';
 
 const RegisterPage = () => {
   return (
@@ -10,11 +11,10 @@ const RegisterPage = () => {
             <h2>Login</h2>
         </header>
         <AuthTemplate>
-            <AuthForm type='register' />
+            <AuthForm type='register'/>
         </AuthTemplate>
         </div>
   );
 };
-
 
 export default RegisterPage;
