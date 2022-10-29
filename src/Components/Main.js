@@ -2,6 +2,7 @@ import img_logo from '../images/logo.png'
 import About from './About'
 import ImageShow from './ImageShow'
 import {Link} from "react-router-dom"
+import BasicSlider from './BasicSlide'
 
 function Main() {
     return(
@@ -30,20 +31,26 @@ function Main() {
 							</header>
 							<form method="post" action="#" class="cta">
 								<div claclassNamess="row gtr-uniform gtr-50">
-									<div className="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
-									<div className="col-4 col-12-xsmall"><input href="Login_v2/index.html" type="submit" value="Get Started" class="fit primary" /></div>
+									<div className="col-4 col-12-xsmall"><Link to='/register'><input type="button" value="Get Started" class="fit primary" /></Link></div>
 								</div>
 							</form>
 						</div>
 						<a href="#two" className="goto-next scrolly">Next</a>
 					</section>
 
-					{/* 이미지 갤러리 */}
+					{/* 이미지 갤러리
 					<section id="two" className="spotlight style1 bottom">
 							<div className="content">
 								<div className="container">
 									<ImageShow></ImageShow>
 								</div>
+							</div>
+					</section> */}
+
+					{/* 이미지 갤러리 */}
+					<section id="two">
+							<div className="content">
+								<BasicSlider></BasicSlider>
 							</div>
 					</section>
 

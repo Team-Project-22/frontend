@@ -44,12 +44,25 @@ const Footer = styled.div`
 
 `
 
+// 에러 보여주는 UI
+const ErrorMessage = styled.div`
+    color:red;
+    text-align:center;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+`
+
+const Text = {
+    textAlign:'center'
+}
+
+
 const textMap = {
     login:'로그인',
     register : '회원가입'
 }
 
-const AuthForm = ({type , form , onChange, onSubmit }) => {
+const AuthForm = ({type , form , onChange, onSubmit, error }) => {
     const text = textMap[type];
     return (
         <AuthFormBlock>
@@ -91,13 +104,12 @@ const AuthForm = ({type , form , onChange, onSubmit }) => {
                 <ButtonWithMarinTop fullWidth>{text}</ButtonWithMarinTop>
             </form>
             <Footer>
-                {type === 'login' ? (
-                    <Link to="/register">회원가입</Link>
-                ):(
-                    <Link to="/login">로그인</Link>
-                )
+                    {type === 'login' ? (
+                        <pre style={Text}>계정이 없으신가요? <Link to="/register">회원가입</Link></pre>
+                    ):(
+                        <pre style={Text}>계정이 이미 있으신가요? <Link to="/login">로그인</Link></pre>
+                    )
                 }
-               
             </Footer>
         </AuthFormBlock>
     );

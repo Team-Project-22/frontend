@@ -55,7 +55,6 @@ function Rating() {
 export default Rating;
 
 const Wrap = styled.div`
-  display: flex;
   flex-direction: column;
   padding-top: 15px;
 `;
@@ -67,7 +66,7 @@ const RatingText = styled.div`
 `;
 
 const Stars = styled.div`
-  display: flex;
+  display: center;
   padding-top: 5px;
 
   & svg {

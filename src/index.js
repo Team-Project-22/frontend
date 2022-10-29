@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
 // import ScrollToTop from './Components/ScrollToTop';
+
 import {createStore} from "redux"
 import { Provider } from "react-redux"; // 추가
 import { composeWithDevTools } from "redux-devtools-extension";
@@ -24,7 +26,7 @@ const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaM
 root.render(
   <Provider store={store}>
     <React.StrictMode>
-    {/* <ScrollToTop /> */}
+      {/* <ScrollToTop /> */}
       <App />
     </React.StrictMode>
   </Provider>

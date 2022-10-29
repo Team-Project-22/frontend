@@ -8,7 +8,7 @@ const RegisterPage = () => {
   return (
     <div id="main" className="wrapper style0">
         <header className="major">
-            <h2>Login</h2>
+            <h2>회원가입</h2>
         </header>
         <AuthTemplate>
             <RegisterForm type='register'/>
