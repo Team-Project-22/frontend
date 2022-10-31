@@ -15,6 +15,7 @@ import Rating from './Components/rating';
 import Profile from './Components/Profile';
 
 import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 
 import React, {useEffect} from 'react'
 import axios from 'axios';
@@ -25,14 +26,14 @@ import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
 
 import img_logo from "./images/logo.png";
 import db from "./db/sample_data.json";
-import RegisterPage from './pages/RegisterPage';
+
 
 function App() {
   return(
     <div>
       <BrowserRouter>
         <Header />
-        <Routes>
+          <Routes>
           <Route path="/" exact={true} element={<Home />}/>
           <Route path="gallery" exact={true} element={<Gallery db={db} />} />
           <Route path="gallery" exact={true} element={<Gallery />} />

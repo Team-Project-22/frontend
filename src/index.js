@@ -18,10 +18,12 @@ import { applyMiddleware } from "redux"
 
 // saga middleware 생성
 const sagaMiddleware = createSagaMiddleware();
-
+// root Saga import 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
+// store 적용
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));
+// saga 실행
+sagaMiddleware.run(rootSaga);
 
 root.render(
   <Provider store={store}>
@@ -29,7 +31,8 @@ root.render(
       {/* <ScrollToTop /> */}
       <App />
     </React.StrictMode>
-  </Provider>
+  </Provider>,
+  document.getElementById('root'),
 );
 
 
