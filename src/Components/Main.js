@@ -3,6 +3,7 @@ import About from './About'
 import ImageShow from './ImageShow'
 import {Link} from "react-router-dom"
 import BasicSlider from './BasicSlide'
+import SimpleSlider from './SimpleSlider'
 
 function Main() {
     return(
@@ -19,7 +20,7 @@ function Main() {
 								</header>
 								<span class="image"><img src={img_logo} alt="img_logo" /></span>
 							</div>
-							<a href="#one" class="goto-next scrolly">Next</a>
+							<a href="#two" class="goto-next scrolly">Next</a>
 					</section>
 
 					{/* 두번 쨰 섹션 */}
@@ -38,23 +39,17 @@ function Main() {
 						<a href="#two" className="goto-next scrolly">Next</a>
 					</section>
 
-					{/* 이미지 갤러리
-					<section id="two" className="spotlight style1 bottom">
-							<div className="content">
-								<div className="container">
-									<ImageShow></ImageShow>
-								</div>
-							</div>
-					</section> */}
-
 					{/* 이미지 갤러리 */}
-					<section id="two">
-							<div className="content">
-								<BasicSlider></BasicSlider>
-							</div>
-					</section>
+						<section id="two">
+							<span className="image fit main"><img src="images/pic03.jpg" alt="" /></span>
+								<div className="content">
+									<SimpleSlider></SimpleSlider>
+								</div>
+							<a href="#three" className="goto-next scrolly">Next</a>
+						</section>
+						<hr />
 
-					{/* 세번 째 세션 */}
+					{/* 세번 째 세션
 					<section id="two" className="spotlight style1 bottom">
 							<span className="image fit main"><img src="images/pic02.jpg" alt="" /></span>
 							<div className="content">
@@ -86,7 +81,7 @@ function Main() {
 							<a href="#three" className="goto-next scrolly">Next</a>
 					</section>
 
-					{/* 네 번째 섹션 */}
+					
 					<section id="three" className="spotlight style2 right">
 							<span className="image fit main"><img src="images/pic03.jpg" alt="" /></span>
 							<div className="content">
@@ -100,7 +95,7 @@ function Main() {
 								</ul>
 							</div>
 							<a href="#four" className="goto-next scrolly">Next</a>
-					</section>
+					</section> */}
 
 					{/* 마지막 섹션 */}
 					<section id="four" className="wrapper style1 special fade-up">
