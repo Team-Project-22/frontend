@@ -1,4 +1,4 @@
-function Profile() {
+function MyPage() {
     // const { user } = useUserState();
     return(
         <div id="main" className="wrapper style0">
@@ -12,4 +12,4 @@ function Profile() {
     );
 };
 
-export default Profile;
+export default MyPage;

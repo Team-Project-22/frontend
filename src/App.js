@@ -11,8 +11,8 @@ import Gallery from './Components/Gallary';
 import Login from './Components/login';
 import Detail from "./Components/Detail";
 import About from "./Components/About";
+import Mypage from './Components/MyPage';
 import Rating from './Components/rating';
-import Profile from './Components/Profile';
 import TopButton from './Components/ToButton';
 
 import LoginPage from './pages/LoginPage';
@@ -42,7 +42,7 @@ function App() {
             <Route path="login" exact={true} element={<LoginPage />} />
             <Route path="register" exact={true} element={<RegisterPage />} /> 
             <Route path="/detail/:Obj_ID" element={<Detail db={db}/>}/>
-            <Route path="profile" exact={true} element={<Profile />} /> 
+            <Route path="mypage" exact={true} element={<Mypage />} /> 
             <Route path="*" element={<div>없는 페이지입니다.</div>} />
           </Routes>
           <TopButton></TopButton>

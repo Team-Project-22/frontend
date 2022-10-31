@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 import Home from "./Main";
 import Gallery from "./Gallary";
 import About from "./About";
-import Profile from "./Profile";
+import Profile from "./MyPage";
 import Login from "./login";
 import Footer from "./Footer";
 
@@ -17,9 +17,9 @@ function Header() {
 					<ul>
 					<li><Link to="/">Home</Link></li>
 					<li><Link to="/gallery">ART</Link></li>
-					<li><Link to="gallery">ARTIST</Link></li>
+					{/* <li><Link to="gallery">ARTIST</Link></li> */}
 					<li><Link to="/about">ABOUT</Link></li>
-					<li><Link to="/profile">Profile</Link></li>
+					<li><Link to="/mypage">My Page</Link></li>
 					<li><Link to="login"><a className="button primary">Log In</a></Link></li>
 					</ul>
 				</nav>

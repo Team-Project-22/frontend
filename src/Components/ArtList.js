@@ -9,6 +9,10 @@ function ArtList(props) {
         aligndbs: "center",
     }
 
+    const font_size = {
+        paddingLeft : "20px"
+    }
+
     return(
         <div class="container">
 					<header className="major">
@@ -24,12 +28,13 @@ function ArtList(props) {
                                                 <Nav.Link href={'detail/'+item.Obj_ID} style={ComponentBox}>
                                                     <img src={item.Img_file} width="90%" />
                                                 </Nav.Link>
-                                                <h4>key: {item.Obj_ID}</h4>
-                                                <h4>Obj_ID : {item.Obj_ID}</h4>
-                                                <h4>{item.Title}</h4>
-                                                <h4>{item.Obj_dates}</h4>
+                                                {/* <h4>key: {item.Obj_ID}</h4>
+                                                <h4>Obj_ID : {item.Obj_ID}</h4> */}
+                                                <h1></h1>
+                                                <h4 style={font_size}>{item.Title}</h4>
+                                                {/* <h4>{item.Obj_dates}</h4>
                                                 <h4>{item.Dimensions}</h4>
-                                                <h4>{item.Mediums}</h4>
+                                                <h4>{item.Mediums}</h4> */}
                                             </div>
                                     );
                                 })};
