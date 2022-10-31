@@ -13,6 +13,7 @@ import Detail from "./Components/Detail";
 import About from "./Components/About";
 import Rating from './Components/rating';
 import Profile from './Components/Profile';
+import TopButton from './Components/ToButton';
 
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
@@ -34,16 +35,17 @@ function App() {
       <BrowserRouter>
         <Header />
           <Routes>
-          <Route path="/" exact={true} element={<Home />}/>
-          <Route path="gallery" exact={true} element={<Gallery db={db} />} />
-          <Route path="gallery" exact={true} element={<Gallery />} />
-          <Route path="about" exact={true} element={<About />} />
-          <Route path="login" exact={true} element={<LoginPage />} />
-          <Route path="register" exact={true} element={<RegisterPage />} /> 
-          <Route path="/detail/:Obj_ID" element={<Detail db={db}/>}/>
-          <Route path="profile" exact={true} element={<Profile />} /> 
-          <Route path="*" element={<div>없는 페이지입니다.</div>} />
-        </Routes>
+            <Route path="/" exact={true} element={<Home />}/>
+            <Route path="gallery" exact={true} element={<Gallery db={db} />} />
+            <Route path="gallery" exact={true} element={<Gallery />} />
+            <Route path="about" exact={true} element={<About />} />
+            <Route path="login" exact={true} element={<LoginPage />} />
+            <Route path="register" exact={true} element={<RegisterPage />} /> 
+            <Route path="/detail/:Obj_ID" element={<Detail db={db}/>}/>
+            <Route path="profile" exact={true} element={<Profile />} /> 
+            <Route path="*" element={<div>없는 페이지입니다.</div>} />
+          </Routes>
+          <TopButton></TopButton>
         <Footer />
       </BrowserRouter>
     </div>

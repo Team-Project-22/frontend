@@ -1,1 +1,0 @@
-import BasicSlider from "./BasicSlide";

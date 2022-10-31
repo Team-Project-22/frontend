@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img1 from "./img/art1.png";
-import img2 from "./img/art2.png";
-import img3 from "./img/art3.png";
 import db from "../db/sample_data.json"
 import { Nav } from "react-bootstrap";
 
@@ -14,7 +11,7 @@ function SimpleSlider() {
         return Math.floor(Math.random() * (max - min)) + min;
       }
 
-    // const a = setInterval(function() {
+    // var a = setInterval(function() {
     //     rand(0, 20);
     // }, 3000);
 
@@ -34,14 +31,14 @@ function SimpleSlider() {
             breakpoint: 960, //화면 사이즈 960px일 때
             settings: {
                 //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-                slidesToShow:3 
+                slidesToShow:1
             } 
         },
         { 
             breakpoint: 768, //화면 사이즈 768px일 때
             settings: {	
                 //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
-                slidesToShow:2 
+                slidesToShow:1
             } 
         }
         ]
@@ -66,7 +63,7 @@ function SimpleSlider() {
             <div key={db[0].Obj_ID}>
                 <Slider {...settings}>
                     <Nav.Link href={'detail/'+db[a].Obj_ID}>
-                        <img src={db[a].Img_file} width="40%"/>
+                        <img src={db[a].Img_file} width="60%"/>
                     </Nav.Link>
                     <Nav.Link href={'detail/'+db[a+1].Obj_ID}>
                         <img src={db[a+1].Img_file} width="60%"/>

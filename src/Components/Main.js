@@ -1,8 +1,6 @@
 import img_logo from '../images/logo.png'
 import About from './About'
-import ImageShow from './ImageShow'
 import {Link} from "react-router-dom"
-import BasicSlider from './BasicSlide'
 import SimpleSlider from './SimpleSlider'
 
 function Main() {
