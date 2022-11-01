@@ -19,7 +19,7 @@ function ArtList(props) {
 						<h2>ART</h2>
 					</header>
                     <section>
-                        <h3>Art collections</h3>
+                        <h3 style={font_size}>Art collections</h3>
                         <div className="box alt">
                             <div className="row gtr-50 gtr-uniform">
                                 {props.db.map((item, index) => {

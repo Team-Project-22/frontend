@@ -21,7 +21,7 @@ function About() {
                     <p>
                         딥러닝 기술을 기반으로 한 추천시스템,<br></br>
                         Artasy에는 매일 사용자 취향에 맞는 작품이 추천됩니다.<br></br>
-                        당신의 취향에 맞는 작품을 중심으로 아트 라이프를 시작해보세요.<br></br>
+                        취향에 맞는 작품을 중심으로 자신만의 아트 라이프를 시작해보세요.<br></br>
 
                     </p>
                 </header>
@@ -32,36 +32,40 @@ function About() {
                         <h3>About Artasy</h3>
                         <p>Aliquam massa urna, imperdiet sit amet mi non, bibendum euismod est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam quam, mollis at magna consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam cubilia adipiscing interdum aliquet aliquet placerat cubilia accumsan cep ante nullam adipiscing tortor odio. Iaculis adipiscing accumsan nascetur in cras. Lacinia placerat.</p>
                         <p>Vestibulum diam quam, mollis at consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum. Morbi mattis elementum orci, nec dictum porta cursus justo. Quisque ultricies lorem in ligula condimentum, et egestas turpis sagittis. Cras ac nunc urna. Nullam eget lobortis purus. Phasellus vitae tortor non est placerat tristique faucibus magna adipiscing aliquet blandit nisi dolor accumsan nascetur lorem. Vis enim. Curae. Mi arcu vis aliquam ipsum non accumsan ac mi faucibus amet eu accumsan erat interdum semper accumsan. Eu sagittis tellus accumsan neque lorem penatibus in porttitor. Vivamus commodo curae. Condimentum lobortis praesent id ac lorem. Lorem vis ipsum dolor feugiat consequat dolore adipiscing.</p>
+                        <br></br>
+                        <br></br>
                         <h3>Artasy가 앞으로 걸어갈 길</h3>
-                        <p>In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus. Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit in laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum metus. In accumsan lorem nunc ultrices a ac eu accumsan ac id nullam. Nec lobortis. Faucibus. Mi commodo laoreet arcu at non mi lacinia aliquet non lobortis phasellus accumsan nascetur varius. Integer orci porttitor eu faucibus aliquet faucibus ac accumsan adipiscing accumsan odio. Ut adipiscing.</p>
+                        <p>그 동안 미술 시장은 어렵다는 편견때문에 접근하기가 쉽지 않았습니다. 저희는 이러한 진입 장벽을 낮추고자 서비스를 시작했고 앞으로 진입 장벽을 낮추기 위해 노력할 것 입니다.</p>
                         <ul>
-                            <li>Faucibus orci lobortis ac adipiscing integer.</li>
-                            <li>Col accumsan arcu mi aliquet placerat.</li>
-                            <li>Lobortis vestibulum ut magna tempor massa nascetur.</li>
-                            <li>Blandit massa non blandit tempor interdum.</li>
-                            <li>Lacinia mattis arcu nascetur lobortis.</li>
+                            <li>누구나 사용 할 수 있는 작품 취향 추천</li>
+                            <li>쉬운 설명을 통한 진입장벽 완화</li>
+                            <li>짧은 시간 여러 작품을 감상</li>
+                            <li>사용자만의 맞춤 작품 추천</li>
+                            <li>인공지능을 통한 강력한 취향 분석</li>
+                            <li>내가 있는 곳이 곧 미술관</li>
                         </ul>
                     </section> 
+                    <hr />
                     
 
                     
                     <section>
+
                         <h3>Contact Us</h3>
                         <form method="post" action="#">
                             <div className="row gtr-uniform gtr-50">
                                 <div className="col-6 col-12-xsmall">
-                                    <input type="text" name="name" id="name" value="" placeholder="Name" />
+                                    <input type="text" name="name" id="name" value="" placeholder="이름" />
                                 </div>
                                 <div className="col-6 col-12-xsmall">
-                                    <input type="email" name="email" id="email" value="" placeholder="Email" />
+                                    <input type="email" name="email" id="email" value=" " placeholder="Email" />
                                 </div>
                                 <div className="col-12">
                                     <select name="category" id="category">
                                         <option value="">- Category -</option>
-                                        <option value="1">Manufacturing</option>
-                                        <option value="1">Shipping</option>
-                                        <option value="1">Administration</option>
-                                        <option value="1">Human Resources</option>
+                                        <option value="1">서비스 관련</option>
+                                        <option value="1">오류 제보</option>
+                                        <option value="1">기타문의</option>
                                     </select>
                                 </div>
                                 <div className="col-4 col-12-medium">
@@ -78,17 +82,17 @@ function About() {
                                 </div>
                                 <div claclassNamess="col-6 col-12-medium">
                                     <input type="checkbox" id="copy" name="copy"></input>
-                                    <label for="copy">Email me a copy of this message</label>
+                                    <label for="copy">이메일 수신에 동의합니다.</label>
                                 </div>
                                 <div className="col-6 col-12-medium">
                                     <input type="checkbox" id="human" name="human" checked></input>
-                                    <label for="human">I am a human and not a robot</label>
+                                    <label for="human">로봇이 아닙니다.</label>
                                 </div>
                                 <div className="col-12">
                                     <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
                                 </div>
                                 <div className="col-12">
-                                    <ul style={submit} clclassNameass="actions">
+                                    <ul style={submit} className="actions">
                                         <li><input type="submit" value="Send Message" className="primary" /></li>
                                         <li><input type="reset" value="Reset" /></li>
                                     </ul>

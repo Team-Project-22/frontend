@@ -2,6 +2,12 @@ import img_logo from '../images/logo.png'
 import About from './About'
 import {Link} from "react-router-dom"
 import SimpleSlider from './SimpleSlider'
+import { BsPeople} from "react-icons/bs"
+import { FiUser } from "react-icons/fi"
+import { SlRocket, SlPicture} from "react-icons/sl"
+import { SiTensorflow } from "react-icons/si"
+import { AiOutlineTool } from "react-icons/ai"
+
 
 function Main() {
     return(
@@ -34,105 +40,63 @@ function Main() {
 								</div>
 							</form>
 						</div>
-						<a href="#two" className="goto-next scrolly">Next</a>
 					</section>
 
 					{/* 이미지 갤러리 */}
-						<section id="two">
-							<span className="image fit main"><img src="images/pic03.jpg" alt="" /></span>
-								<div className="content">
-									<SimpleSlider></SimpleSlider>
-								</div>
-							<a href="#three" className="goto-next scrolly">Next</a>
-						</section>
-						<hr />
-
-					{/* 세번 째 세션
-					<section id="two" className="spotlight style1 bottom">
-							<span className="image fit main"><img src="images/pic02.jpg" alt="" /></span>
+					<section id="two" className="wrapper style1 special fade-up">
 							<div className="content">
-								<div className="container">
-									<div className="row">
-										<div className="col-4 col-12-medium">
-											<header>
-												<h2>언제 어디서나 쉽게</h2>
-												<p>Easily anytime, anywhere</p>
-											</header>
-										</div>
-										<div className="col-4 col-12-medium">
-											<p>Feugiat accumsan lorem eu ac lorem amet sed accumsan donec.
-											Blandit orci porttitor semper. Arcu phasellus tortor enim mi
-											nisi praesent dolor adipiscing. Integer mi sed nascetur cep aliquet
-											augue varius tempus lobortis porttitor accumsan consequat
-											adipiscing lorem dolor.</p>
-										</div>
-										<div className="col-4 col-12-medium">
-											<p>Morbi enim nascetur et placerat lorem sed iaculis neque ante
-											adipiscing adipiscing metus massa. Blandit orci porttitor semper.
-											Arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer
-											mi sed nascetur cep aliquet augue varius tempus. Feugiat lorem
-											ipsum dolor nullam.</p>
-										</div>
-									</div>
-								</div>
+								<SimpleSlider></SimpleSlider>
 							</div>
-							<a href="#three" className="goto-next scrolly">Next</a>
+						<a href="#three" className="goto-next scrolly">Next</a>
 					</section>
+					<hr />
 
 					
-					<section id="three" className="spotlight style2 right">
-							<span className="image fit main"><img src="images/pic03.jpg" alt="" /></span>
-							<div className="content">
-								<header>
-									<h2>내 손안의 작은 미술관</h2>
-									<p>A little art gallery in my hand</p>
-								</header>
-								<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
-								<ul className="actions">
-									<li><a href="#" className="button">Learn More</a></li>
-								</ul>
-							</div>
-							<a href="#four" className="goto-next scrolly">Next</a>
-					</section> */}
-
 					{/* 마지막 섹션 */}
-					<section id="four" className="wrapper style1 special fade-up">
+					<section id="three" className="wrapper style1 special fade-up">
 							<div className="container">
 								<header className="major">
 									<h2>ARTASY VISION</h2>
-									<p>Lower the threshold of the art market by recommending works tailored to you</p>
+									<p>Easy art and culture life anytime, anywhere</p>
 								</header>
 								<div className="box alt">
 									<div className="row gtr-uniform">
 										<section className="col-4 col-6-medium col-12-xsmall">
-											<span className="icon solid alt major fa-chart-area"></span>
+											<BsPeople size="100"/>
+											{/* <span className="icon solid alt major fa-chart-area"></span> */}
+											<h3></h3>
 											<h3>누구나</h3>
-											<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+											<p>미술에 관심 있는 사람이라면 누구나</p>
 										</section>
 										<section className="col-4 col-6-medium col-12-xsmall">
-											<span className="icon solid alt major fa-comment"></span>
+											<AiOutlineTool size="100"/>
+											<h3></h3>
 											<h3>쉽게</h3>
-											<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+											<p>어려운 작품 설명은 그만</p>
 										</section>
 										<section className="col-4 col-6-medium col-12-xsmall">
-											<span className="icon solid alt major fa-flask"></span>
-											<h3>어디서든</h3>
-											<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+											<SlRocket size="100" />
+											<h3></h3>
+											<h3>빠르게</h3>
+											<p>쉽고 빠르게 어디에서나</p>
 										</section>
 										<section className="col-4 col-6-medium col-12-xsmall">
-											<span className="icon solid alt major fa-paper-plane"></span>
-											<h3>맞춤 서비스</h3>
-											<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+											<FiUser size="100"/>
+											<h3></h3>
+											<h3>맞춤 작품</h3>
+											<p>당신이 기다리던 작품 추천</p>
 										</section>
 										<section className="col-4 col-6-medium col-12-xsmall">
-											<span className="icon solid alt major fa-file"></span>
-											<h3>삶의 질 향상</h3>
-											<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+											<SiTensorflow size="100" />
+											<h3></h3>
+											<h3>AI</h3>
+											<p>AI와 함께 해 더 강력한 취향 분석</p>
 										</section>
 										<section className="col-4 col-6-medium col-12-xsmall">
-											<span className="icon solid alt major fa-lock"></span>
+											<SlPicture size="100" />
+											<h3></h3>
 											<h3>문화 생활</h3>
-											<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+											<p>언제 어디서나 즐기는 문화생활</p>
 										</section>
 									</div>
 								</div>

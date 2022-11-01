@@ -15,7 +15,7 @@ function MyPage() {
 
                 <section>
                     <blockquote><h3>oo님의 Favorite</h3></blockquote>
-                    <div class="box alt">
+                    {/* <div class="box alt">
                         <div class="row gtr-50 gtr-uniform">
                             <div class="col-12"><span class="image fit"><img src="images/pic07.jpg" alt="" /></span></div>
                             <div class="col-4 col-6-xsmall"><span class="image fit"><img src="../img/art1.png" alt="" /></span></div>
@@ -31,7 +31,7 @@ function MyPage() {
                             <div class="col-4 col-6-xsmall"><span class="image fit"><img src="../img/art11.png" alt="" /></span></div>
                             <div class="col-4 col-6-xsmall"><span class="image fit"><img src="../img/art12.png" alt="" /></span></div>
                         </div>
-                    </div>
+                    </div> */}
 				</section>
             </div>
         </div>
