@@ -16,7 +16,7 @@ function SimpleSlider() {
     //     rand(0, 20);
     // }, 3000);
 
-    const a = rand(0, 30);
+    const a = rand(0, 20);
 
     const imgcenter = {
         display: "flex",
@@ -90,26 +90,6 @@ function SimpleSlider() {
                             <img src={db[a+4].Img_file} alt=""/> 
                         </Nav.Link> 
                     </div>
-
-    
-                    {/* <div className="align-center">
-                        <h3>1</h3>
-                    </div>
-                    <div className="align-center">
-                        <h3>2</h3>
-                    </div>
-                    <div className="align-center">
-                        <h3>3</h3>
-                    </div>
-                    <div className="align-center">
-                        <h3>4</h3>
-                    </div>
-                    <div className="align-center">
-                        <h3>5</h3>
-                    </div>
-                    <div className="align-center">
-                        <h3>6</h3>
-                    </div> */}
                 </Slider>
             </div>
         </div>

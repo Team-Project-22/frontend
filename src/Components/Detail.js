@@ -9,6 +9,7 @@ import db from "../db/sample_data.json"
 // 장바구니
 import { useDispatch } from "react-redux";
 import { addCart } from "../store/actions";
+import { FaBold } from "react-icons/fa";
 
 function Detail() {
     const top = {
@@ -18,6 +19,10 @@ function Detail() {
     }
     const font ={
         fontSize: "20px"
+    }
+    const font_weight={
+        font_weight: "Bold",
+        fontSize: "17px"
     }
     const ComponentBox = {
         display: "flex",
@@ -65,7 +70,8 @@ function Detail() {
                                         <h3 className="align-center" style={top}>{db.Title}</h3>
                                         <h3 className="align-center" style={font}>{db.Dimensions}</h3>
                                         <h3 className="align-center" style={font}>{db.Mediums}  {db.Obj_dates}</h3>
-                                        <h3 className="align-center"><button onClick={() => dispatch(addCart(db))} className="button primary">관심목록 추가</button></h3>
+                                        <br />
+                                        <h3 className="align-center"><button style={font_weight} onClick={() => dispatch(addCart(db))} className="button primary">관심목록 추가</button></h3>
                                         {/* <h3 className="align-center"><span onClick={()=>{ likechange(like+=1) }}>❤️</span> {like} </h3> */}
                                         <h3 className="align-center"><Rating></Rating></h3>                                       
                                     </section>

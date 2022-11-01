@@ -1,5 +1,4 @@
-import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
-import { Button, Navbar, Container, Nav } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
 import db from "../db/sample_data.json"
 
 function ArtList(props) {

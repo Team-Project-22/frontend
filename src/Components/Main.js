@@ -19,8 +19,8 @@ function Main() {
 							<div className="content">
 								<header>
 									<h2>Art life with Artasy</h2>
-									<p>We Provide Art life only You.<br />
-									Let's Start with Artasy.</p>
+									<p>We Provide Art life only You<br />
+									Let's Start with Artasy</p>
 								</header>
 								<span class="image"><img src={img_logo} alt="img_logo" /></span>
 							</div>
