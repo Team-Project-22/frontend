@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,7 +16,7 @@ function SimpleSlider() {
     //     rand(0, 20);
     // }, 3000);
 
-    const a = rand(0, 20);
+    const a = rand(0, 30);
 
     const imgcenter = {
         display: "flex",
@@ -58,7 +58,6 @@ function SimpleSlider() {
         <div className="container">
             <div>
                 <header className="align-center">
-                    <h1></h1>
                     <h2>Weekly Recommend</h2>
                     <p>Start Weekly Art with Artasy</p>
                 </header>
@@ -68,27 +67,27 @@ function SimpleSlider() {
                 <Slider {...settings}>
                     <div className="align-center">
                         <Nav.Link style={imgcenter} href={'detail/'+db[a].Obj_ID}>
-                            <img src={db[a].Img_file}/>
+                            <img src={db[a].Img_file} alt=""/>
                         </Nav.Link>
                     </div>
                     <div className="align-center">
                         <Nav.Link style={imgcenter} href={'detail/'+db[a+1].Obj_ID}>
-                            <img src={db[a+1].Img_file}/>
+                            <img src={db[a+1].Img_file} alt=""/>
                         </Nav.Link>
                     </div>
                     <div className="align-center">
                         <Nav.Link style={imgcenter} href={'detail/'+db[a+2].Obj_ID}>
-                            <img src={db[a+2].Img_file}/>
+                            <img src={db[a+2].Img_file} alt=""/>
                         </Nav.Link>
                     </div>
                     <div className="align-center">
                         <Nav.Link style={imgcenter} href={'detail/'+db[a+3].Obj_ID}>
-                            <img src={db[a+3].Img_file} />
+                            <img src={db[a+3].Img_file} alt=""/>
                         </Nav.Link>
                     </div>
                     <div className="align-center">
                         <Nav.Link style={imgcenter} href={'detail/'+db[a+4].Obj_ID}>
-                            <img src={db[a+4].Img_file} /> 
+                            <img src={db[a+4].Img_file} alt=""/> 
                         </Nav.Link> 
                     </div>
 

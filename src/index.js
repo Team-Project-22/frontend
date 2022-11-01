@@ -15,6 +15,9 @@ import createSagaMiddleware from 'redux-saga'
 import rootReducer, {rootSaga} from './modules/index';
 import { applyMiddleware } from "redux"
 
+// 장바구니
+// import rootReducer from "./store/reducers"
+
 
 // saga middleware 생성
 const sagaMiddleware = createSagaMiddleware();
@@ -24,6 +27,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));
 // saga 실행
 sagaMiddleware.run(rootSaga);
+
+// 장바구니
+// const store = createStore(rootReducer);
 
 root.render(
   <Provider store={store}>

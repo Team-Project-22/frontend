@@ -15,12 +15,12 @@ function Header() {
 				<h1 id="logo"><Link to="/">Artasy</Link></h1>
 				<nav id="nav">
 					<ul>
-					<li><Link to="/">Home</Link></li>
+					<li><Link to="/">HOME</Link></li>
 					<li><Link to="/gallery">ART</Link></li>
 					{/* <li><Link to="gallery">ARTIST</Link></li> */}
 					<li><Link to="/about">ABOUT</Link></li>
-					<li><Link to="/mypage">My Page</Link></li>
-					<li><Link to="login"><a className="button primary">Log In</a></Link></li>
+					<li><Link to="/mypage">MY PAGE</Link></li>
+					<li><Link to="login"><a className="button primary">LOG IN</a></Link></li>
 					</ul>
 				</nav>
 			</header>
