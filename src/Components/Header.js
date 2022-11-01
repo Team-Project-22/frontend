@@ -5,10 +5,17 @@ import About from "./About";
 import Profile from "./MyPage";
 import Login from "./login";
 import Footer from "./Footer";
+import Button from "./common/Button";
+import styled from "styled-components";
+
+const UserInfo = styled.div`
+  font-weight: 800;
+  margin-right: 1rem;
+`;
 
 
 // 상단 메뉴바
-function Header() {
+function Header({user}) {
     return(
 		<div>
 			<header id="header">
@@ -20,7 +27,21 @@ function Header() {
 					{/* <li><Link to="gallery">ARTIST</Link></li> */}
 					<li><Link to="/about">ABOUT</Link></li>
 					<li><Link to="/mypage">MY PAGE</Link></li>
-					<li><Link to="login"><a className="button primary">LOG IN</a></Link></li>
+					{user ? (
+						<li>
+							<div className="button primary">
+								<UserInfo>{user.username}</UserInfo>
+								<Button>로그아웃</Button>
+							</div>
+						</li>
+					) : (
+						<li>
+							<div className="primary">
+								<Button to="/login">로그인</Button>
+							</div>
+						</li>
+					)}
+					{/* <li><Link to="login"><a className="button primary">LOG IN</a></Link></li> */}
 					</ul>
 				</nav>
 			</header>
