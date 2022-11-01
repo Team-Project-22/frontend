@@ -1,0 +1,35 @@
+.slick-slider /*슬라이드 틀 조정*/
+{
+    position:relative;
+    background: #1C1D26;
+    display:inline-block;
+    width: 1000px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-slide img
+{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    padding-left: auto;
+    width: auto;
+}
+.slick-list
+{
+    position: relative;
+    width: 1000px;
+}

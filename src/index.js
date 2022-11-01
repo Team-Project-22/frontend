@@ -28,7 +28,6 @@ sagaMiddleware.run(rootSaga);
 root.render(
   <Provider store={store}>
     <React.StrictMode>
-      {/* <ScrollToTop /> */}
       <App />
     </React.StrictMode>
   </Provider>,
